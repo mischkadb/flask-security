@@ -43,7 +43,7 @@ _default_field_labels = {
 
 class ValidatorMixin(object):
     def __call__(self, form, field):
-        if form.email.data:
+        if 'email' in form and form.email.data:
             form.email.data = form.email.data.strip()
         if self.message and self.message.isupper():
             self.message = get_message(self.message)[0]
