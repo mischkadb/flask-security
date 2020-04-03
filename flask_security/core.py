@@ -232,7 +232,7 @@ _default_forms = {
 
 
 def _user_loader(user_id):
-    return _security.datastore.find_user(id=user_id)
+    return _security.datastore.find_user(alternative_id=user_id)
 
 
 def _request_loader(request):
